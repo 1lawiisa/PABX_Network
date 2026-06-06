@@ -1,0 +1,344 @@
+*{
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Mitr', sans-serif;
+}
+
+body{
+    background-color: white;
+    width: 100%;
+    overflow-x: hidden;
+    /* ใช้ background: linear-gradient เพื่อไล่เฉดสี */
+    /* ทิศทาง 180deg คือไล่จากบนลงล่าง โดยเริ่มจากสีขาว (#ffffff) ไปจบที่สีเหลืองครีม (#fff39d) */
+    background: linear-gradient(180deg, #ffffff 0%, #fff39d 100%);
+    width: 100%;
+    min-height: 100vh; /* บังคับให้ความสูงของพื้นหลังเต็มหน้าจอเสมอ แม้เนื้อหาจะน้อย */
+    overflow-x: hidden;
+}
+
+.header{
+    background-color: #fff39d;
+    width: 100%;
+    padding: 30px 15px;
+    text-align: center;
+}
+
+.header h1{
+    font-size: 1.1rem;
+    color: black;
+    font-weight: 450;
+    line-height: 1.4;
+}
+
+.mian-content{
+    width: 100%;
+    padding-top: 40px;
+}
+
+.service-area{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    justify-items: center;
+}
+
+.service-area p{
+    align-items: center;
+    font-size: 12px;
+    color: #8b5a2b;
+}
+
+.service-area p span{
+    font-weight: 600;
+}
+
+.nav-menu{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    background-color: #fff39d;
+    border: 1px solid #8b5a2b;
+    border-radius: 20px;
+    margin: 0 15px 10px 15px;
+    padding: 10px 5px;
+}
+
+.nav-menu a{
+    color: black;
+    text-decoration:none;
+    font-weight: 600;
+}
+
+    .ask-free .ans {
+        text-align: center;
+        color: #d47a00;
+    }
+
+    /* กล่องรวมรายการติดต่อ */
+    .contact-container {
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 40px;
+    }
+
+    /* แต่ละแถวข้อมูลการติดต่อ */
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+    }
+
+    /* สำหรับแถวที่ข้อความยาว ให้ไอคอนอยู่ด้านบนสุดของแถว */
+    .contact-item.alignment-start {
+        align-items: flex-start;
+    }
+
+    /* วงกลมล้อมรอบไอคอน */
+    .icon-box {
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.4rem;
+        margin-right: 20px;
+        flex-shrink: 0; /* ป้องกันวงกลมเบี้ยวบนมือถือ */
+    }
+
+    /* สีไอคอนต่างๆ ตามแบรนด์ */
+    .phone-color {
+        color: #2c2c2c;
+        background-color: #f0f0f0;
+    }
+    .line-color {
+        color: #25d366;
+        background-color: #e8f9ec;
+    }
+    .email-color {
+        color: #ea4335;
+        background-color: #fdeced;
+    }
+    .info-color {
+        color: #111111;
+        background-color: #e8e8e8;
+    }
+
+    .contact-text {
+        font-size: 1.05rem;
+        color: #000000;
+        font-weight: 400;
+        line-height: 1.4;
+    }
+
+    .contact-text .highlight {
+        font-weight: 500;
+    }
+
+    /* ส่วนของหมายเหตุ */
+    .note-section {
+        margin-top: 30px;
+        padding-left: 5px;
+    }
+
+    .note-title {
+        color: #777777;
+        font-size: 0.9rem;
+        display: block;
+        margin-bottom: 4px;
+    }
+
+    .note-text {
+        color: #666666;
+        font-size: 0.9rem;
+        line-height: 1.5;
+        font-weight: 300;
+    }
+
+    .separator {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        color: #999999;
+        font-size: 0.85rem;
+        margin-bottom: 30px;
+    }
+
+    .separator::before, .separator::after {
+        content: '';
+        flex: 1;
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .separator span {
+        padding: 0 15px;
+    }
+
+    /* Autoclick */
+    .autoclick-container {
+        display: flex;
+        justify-content: center;
+        gap: 35px;
+        margin-top: 10px;
+        padding-bottom: 20px;
+    }
+
+    .click-icon {
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.7rem;
+        text-decoration: none;
+        transition: transform 0.2s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+
+    .click-icon:hover {
+        transform: scale(1.1); /* ขยายใหญ่ขึ้นเล็กน้อยเวลาเมาส์ชี้ */
+    }
+
+    /* ปรับขนาดฟอนต์เพิ่มเติมบนหน้าจอมือถือขนาดเล็กมาก */
+    @media (max-width: 380px) {
+        .nav-menu a {
+            font-size: 0.85rem;
+        }
+        .contact-text {
+            font-size: 0.95rem;
+        }
+        .icon-box {
+            width: 40px;
+            height: 40px;
+            font-size: 1.2rem;
+            margin-right: 15px;
+        }
+    }
+
+    /* Abt me */
+    .profile-section {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.section-title {
+    font-size: 1.25rem;
+    color: #d47a00; /* สีส้มเข้มตามภาพตัวอย่างหัวข้อ */
+    font-weight: 500;
+    margin-bottom: 25px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* สั่งการจัดวางแบบ Flex ในคอมพิวเตอร์ให้ออกซ้าย-ขวาคู่กัน */
+.profile-content {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.profile-text {
+    flex: 1.2;
+}
+
+.profile-text p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #444444;
+    text-align: justify;
+    font-weight: 300;
+}
+
+/* จัดรูปแบบภาพและโครงกรอบสัดส่วนรูปภาพ */
+.profile-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.profile-image img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 8px; /* ปรับมุมมนให้เข้ากับหน้าเว็บ */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* ใส่เงาบางๆ เพิ่มความนูนตื้น */
+    object-fit: cover;
+}
+
+/* =======================================================
+   โซนรายการทำไมต้องเลือกเรา (Features Section)
+   ======================================================= */
+.features-section {
+    width: 100%;
+    margin-top: 15px;
+}
+
+.features-title {
+    font-size: 1.3rem;
+    color: #d47a00;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.features-list {
+    list-style: none;
+}
+
+.features-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 18px;
+}
+
+/* ปรับลักษณะและแต่งสีส้มเขียวให้กับไอคอนเช็กถูก */
+.features-list .check-icon {
+    color: #2ed573; /* สีเขียวสดใส */
+    font-size: 1.3rem;
+    margin-right: 15px;
+    margin-top: 2px;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.feature-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #333333;
+    font-weight: 300;
+}
+
+.feature-text strong {
+    font-weight: 500;
+    color: #111111;
+}
+
+@media (max-width: 520px) {
+    /* บนหน้าจอมือถือ ให้รูปภาพลงมาอยู่ด้านล่างข้อความ และขยายกว้างเต็มตามลำดับ */
+    .profile-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+    
+    .profile-text {
+        width: 100%;
+    }
+    
+    .profile-image {
+        width: 100%;
+    }
+
+    .profile-image img {
+        max-width: 280px;
+    }
+
+    .section-title, .features-title {
+        font-size: 1.15rem;
+    }
+    
+    .nav-menu a {
+        font-size: 0.85rem;
+    }
+}
